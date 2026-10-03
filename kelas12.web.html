@@ -1,0 +1,274 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Angkatan XI RPL 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background: #1e3a8a;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e3a8a;
+        }
+
+        /* Tentang */
+        .tentang {
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        /* Anggota */
+        .anggota {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .foto {
+            width: 100px;
+            height: 100px;
+            background: #dbeafe;
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        /* Tombol */
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #1e3a8a;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#anggota">Anggota</a>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero" id="home">
+        <h1>ANGKATAN 2026</h1>
+        <p>XI RPL 1 • Satu Kelas, Satu Cerita</p>
+
+        <button onclick="sapa()">Klik Kami</button>
+    </div>
+
+    <!-- TENTANG -->
+    <section id="tentang">
+        <h2>Tentang Angkatan</h2>
+
+        <div class="tentang">
+            <p>
+                Kami adalah keluarga besar XI RPL 1.
+                Bersama-sama belajar, bercanda, berjuang,
+                dan menciptakan banyak kenangan selama di sekolah.
+            </p>
+
+            <p>
+                <b>Wali Kelas:</b> Bapak/Ibu Guru
+            </p>
+        </div>
+    </section>
+
+    <!-- ANGGOTA -->
+    <section id="anggota">
+        <h2>Anggota Kelas</h2>
+
+        <div class="anggota">
+
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Muhammad Yusuf Kurniawan</h3>
+                <p>Ketua Kelas</p>
+            </div>
+
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Lutfiana Zakiyah</h3>
+                <p>Wakil Ketua</p>
+            </div>
+
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Sarah amelia</h3>
+                <p>Anggota</p>
+            </div>
+
+            <div class="card"> 
+                <div class="foto"> 
+                </div> <h3>Muhammad Romi Jatmiko</h3>
+                 <p>Anggota</p> </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Muhammad Khalid Asy-sya'bani</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Muhammad Setya Dinan</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Adil Fatwa Al-Hadad</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Adzam Lukamnul Dzaki</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Septiana</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Maratun Nifiyah</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Afifah</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Lutviana Nur Aini</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Adzkia</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Karisma Adiesta</h3>
+                <p>Anggota</p>
+            </div>
+            <div class="card">
+                <div class="foto"></div>
+                <h3>Destamel Januari nur Langit</h3>
+                <p>Anggota</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 XII RPL 1</p>
+        <p>Kenangan yang tidak akan terlupakan ❤️</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function sapa() {
+            alert("Salam dari keluarga XII RPL 1! 🎉");
+        }
+    </script>
+
+</body>
+</html>
+```
