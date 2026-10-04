@@ -1,1379 +1,1600 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>XI RPL 1 | Angkatan 2026</title>
-
-    <meta name="description"
-        content="Website resmi keluarga besar XI RPL 1 Angkatan 2026">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #070b16;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        /* =========================
-           BACKGROUND
-        ========================= */
-
-        body::before {
-            content: "";
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: #2563eb;
-            filter: blur(180px);
-            opacity: .18;
-            top: -150px;
-            left: -150px;
-            z-index: -2;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            width: 450px;
-            height: 450px;
-            background: #9333ea;
-            filter: blur(180px);
-            opacity: .15;
-            right: -150px;
-            bottom: -100px;
-            z-index: -2;
-        }
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-
-            background: rgba(7, 11, 22, .75);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(255,255,255,.08);
-        }
-
-        .nav-container {
-            max-width: 1150px;
-            margin: auto;
-            height: 75px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 0 25px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            font-weight: 800;
-            font-size: 18px;
-        }
-
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 12px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XII RPL 1 | Angkatan 2026</title>
+
+<meta name="description"
+content="Website resmi keluarga besar XII RPL 1 Angkatan 2026">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#080a0d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND PREMIUM
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:#00e5ff;
+    filter:blur(180px);
+    opacity:.10;
+    top:-250px;
+    left:-180px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:#ff7a00;
+    filter:blur(190px);
+    opacity:.08;
+    right:-250px;
+    bottom:-250px;
+    z-index:-2;
+}
+
+/* GRID BACKGROUND */
+
+body{
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size:50px 50px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:calc(100% - 35px);
+    max-width:1150px;
+    z-index:999;
+
+    background:rgba(10,13,17,.75);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:18px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+}
+
+.nav-container{
+    height:70px;
+    padding:0 22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
 
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #7c3aed
-            );
-
-            box-shadow:
-                0 10px 30px rgba(37,99,235,.35);
-        }
+    font-size:16px;
+    font-weight:800;
+}
 
-        .nav-menu {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
+.logo-icon{
+    width:42px;
+    height:42px;
 
-        .nav-menu a {
-            color: #b9c1d0;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: .3s;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .nav-menu a:hover {
-            color: white;
-        }
+    border-radius:13px;
 
-        /* =========================
-           HERO
-        ========================= */
+    color:#05080a;
 
-        .hero {
-            min-height: 100vh;
+    background:linear-gradient(
+        135deg,
+        #00e5ff,
+        #7cfff2
+    );
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    box-shadow:
+        0 0 25px rgba(0,229,255,.25);
+}
 
-            padding: 130px 25px 80px;
+.nav-menu{
+    display:flex;
+    gap:8px;
+    list-style:none;
+}
 
-            position: relative;
-        }
+.nav-menu a{
+    color:#9ca3af;
+    text-decoration:none;
 
-        .hero-container {
-            max-width: 1150px;
-            width: 100%;
+    padding:10px 14px;
+    border-radius:10px;
 
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
+    font-size:13px;
+    font-weight:600;
 
-            gap: 70px;
-            align-items: center;
-        }
+    transition:.3s;
+}
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+.nav-menu a:hover{
+    color:#fff;
+    background:rgba(255,255,255,.07);
+}
 
-            padding: 9px 15px;
+/* =========================
+   HERO
+========================= */
 
-            border-radius: 50px;
+.hero{
+    min-height:100vh;
 
-            background: rgba(37,99,235,.12);
-            border: 1px solid rgba(96,165,250,.2);
+    display:flex;
+    align-items:center;
 
-            color: #93c5fd;
+    padding:150px 25px 80px;
 
-            font-size: 12px;
-            font-weight: 700;
+    position:relative;
+}
 
-            margin-bottom: 22px;
-        }
+.hero-container{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
 
-        .badge::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #60a5fa;
-            box-shadow: 0 0 12px #60a5fa;
-        }
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
 
-        .hero h1 {
-            font-size: clamp(48px, 7vw, 82px);
-            line-height: .98;
-            letter-spacing: -4px;
+    gap:80px;
+    align-items:center;
+}
 
-            margin-bottom: 25px;
-        }
+/* BADGE */
 
-        .gradient-text {
-            background: linear-gradient(
-                90deg,
-                #60a5fa,
-                #a78bfa
-            );
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    padding:8px 14px;
 
-        .hero p {
-            max-width: 650px;
+    border-radius:50px;
 
-            color: #9ca6b7;
+    color:#67e8f9;
 
-            font-size: 17px;
-            line-height: 1.8;
+    background:rgba(0,229,255,.07);
+    border:1px solid rgba(0,229,255,.2);
 
-            margin-bottom: 32px;
-        }
+    font-size:11px;
+    font-weight:800;
 
-        .buttons {
-            display: flex;
-            gap: 13px;
-            flex-wrap: wrap;
-        }
+    letter-spacing:1px;
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+    margin-bottom:24px;
+}
 
-            padding: 14px 23px;
+.badge::before{
+    content:"";
 
-            border-radius: 12px;
+    width:7px;
+    height:7px;
 
-            text-decoration: none;
+    border-radius:50%;
 
-            font-weight: 700;
-            font-size: 14px;
+    background:#00e5ff;
 
-            transition: .3s;
-        }
+    box-shadow:
+        0 0 15px #00e5ff;
+}
 
-        .btn-primary {
-            color: white;
+/* HERO TITLE */
 
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #7c3aed
-            );
+.hero h1{
+    font-size:clamp(50px,7vw,88px);
 
-            box-shadow:
-                0 12px 30px rgba(37,99,235,.25);
-        }
+    line-height:.95;
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow:
-                0 18px 40px rgba(37,99,235,.4);
-        }
+    letter-spacing:-5px;
 
-        .btn-secondary {
-            color: #dbe4f5;
+    margin-bottom:28px;
+}
 
-            background: rgba(255,255,255,.05);
+.gradient-text{
+    background:
+        linear-gradient(
+            90deg,
+            #00e5ff,
+            #ffffff,
+            #ff9d45
+        );
 
-            border: 1px solid rgba(255,255,255,.1);
-        }
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        .btn-secondary:hover {
-            background: rgba(255,255,255,.1);
-        }
+.hero p{
+    max-width:610px;
 
-        /* HERO CARD */
+    color:#9ca3af;
 
-        .hero-card {
-            position: relative;
+    font-size:16px;
 
-            min-height: 430px;
+    line-height:1.8;
 
-            padding: 30px;
+    margin-bottom:32px;
+}
 
-            border-radius: 30px;
+/* BUTTON */
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.09),
-                    rgba(255,255,255,.025)
-                );
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
 
-            border: 1px solid rgba(255,255,255,.1);
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-            backdrop-filter: blur(20px);
+    padding:14px 21px;
 
-            box-shadow:
-                0 30px 80px rgba(0,0,0,.3);
+    border-radius:12px;
 
-            overflow: hidden;
-        }
+    text-decoration:none;
 
-        .hero-card::before {
-            content: "";
+    font-size:13px;
+    font-weight:800;
 
-            position: absolute;
+    transition:.3s;
+}
 
-            width: 220px;
-            height: 220px;
+.btn-primary{
+    color:#031014;
 
-            border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            #00e5ff,
+            #7cfff2
+        );
 
-            background: #2563eb;
+    box-shadow:
+        0 10px 30px rgba(0,229,255,.18);
+}
 
-            filter: blur(70px);
+.btn-primary:hover{
+    transform:translateY(-4px);
 
-            opacity: .35;
+    box-shadow:
+        0 18px 45px rgba(0,229,255,.28);
+}
 
-            top: -80px;
-            right: -50px;
-        }
+.btn-secondary{
+    color:#d1d5db;
 
-        .hero-card::after {
-            content: "";
+    background:rgba(255,255,255,.04);
 
-            position: absolute;
+    border:1px solid rgba(255,255,255,.1);
+}
 
-            width: 180px;
-            height: 180px;
+.btn-secondary:hover{
+    background:rgba(255,255,255,.08);
+}
 
-            border-radius: 50%;
+/* =========================
+   HERO CARD
+========================= */
 
-            background: #9333ea;
+.hero-card{
+    position:relative;
 
-            filter: blur(70px);
+    min-height:470px;
 
-            opacity: .3;
+    padding:35px;
 
-            bottom: -70px;
-            left: -50px;
-        }
+    border-radius:30px;
 
-        .card-content {
-            position: relative;
-            z-index: 2;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
 
-            height: 100%;
+    border:1px solid rgba(255,255,255,.1);
 
-            display: flex;
-            flex-direction: column;
+    backdrop-filter:blur(20px);
 
-            justify-content: space-between;
-        }
+    overflow:hidden;
 
-        .year {
-            font-size: 100px;
-            font-weight: 800;
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.4);
+}
 
-            letter-spacing: -8px;
+.hero-card::before{
+    content:"";
 
-            color: rgba(255,255,255,.9);
-        }
+    position:absolute;
 
-        .hero-info {
-            padding-top: 120px;
-        }
+    width:250px;
+    height:250px;
 
-        .hero-info h2 {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
+    border-radius:50%;
 
-        .hero-info p {
-            font-size: 14px;
-            color: #9ca6b7;
-            margin: 0;
-        }
+    background:#00e5ff;
 
-        /* =========================
-           GENERAL
-        ========================= */
+    filter:blur(90px);
 
-        section {
-            padding: 100px 25px;
-        }
+    opacity:.18;
 
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
+    top:-100px;
+    right:-80px;
+}
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 55px;
-        }
+.hero-card::after{
+    content:"";
 
-        .section-label {
-            color: #60a5fa;
-            font-size: 12px;
-            font-weight: 800;
+    position:absolute;
 
-            text-transform: uppercase;
+    width:220px;
+    height:220px;
 
-            letter-spacing: 3px;
-        }
+    border-radius:50%;
 
-        .section-header h2 {
-            font-size: 42px;
-            margin: 12px 0;
-        }
+    background:#ff7a00;
 
-        .section-header p {
-            max-width: 650px;
-            margin: auto;
+    filter:blur(90px);
 
-            color: #8e98a9;
+    opacity:.13;
 
-            line-height: 1.8;
-        }
+    bottom:-100px;
+    left:-80px;
+}
 
-        /* =========================
-           STATISTIK
-        ========================= */
+.card-content{
+    height:100%;
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
+    position:relative;
+    z-index:2;
 
-            gap: 20px;
+    display:flex;
+    flex-direction:column;
 
-            margin-top: 70px;
-        }
+    justify-content:space-between;
+}
 
-        .stat {
-            padding: 28px;
+.year{
+    font-size:110px;
 
-            text-align: center;
+    font-weight:900;
 
-            border-radius: 20px;
+    letter-spacing:-10px;
 
-            background: rgba(255,255,255,.035);
+    color:rgba(255,255,255,.9);
+}
 
-            border: 1px solid rgba(255,255,255,.07);
-        }
+.hero-info{
+    padding-top:120px;
+}
 
-        .stat strong {
-            display: block;
+.hero-info h2{
+    font-size:30px;
 
-            font-size: 34px;
+    margin-bottom:8px;
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #60a5fa,
-                    #a78bfa
-                );
+.hero-info p{
+    margin:0;
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    font-size:13px;
 
-        .stat span {
-            color: #8e98a9;
-            font-size: 13px;
-        }
+    color:#9ca3af;
+}
 
-        /* =========================
-           ABOUT
-        ========================= */
+/* DECORATION */
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
+.circle{
+    position:absolute;
 
-            gap: 60px;
+    width:120px;
+    height:120px;
 
-            align-items: center;
-        }
+    border:1px solid rgba(0,229,255,.2);
 
-        .about-image {
-            min-height: 350px;
+    border-radius:50%;
 
-            border-radius: 28px;
+    right:45px;
+    top:150px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.circle::after{
+    content:"";
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #111827,
-                    #1e293b
-                );
+    position:absolute;
 
-            border: 1px solid rgba(255,255,255,.08);
+    width:7px;
+    height:7px;
 
-            font-size: 90px;
-        }
+    border-radius:50%;
 
-        .about-text h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    background:#00e5ff;
 
-        .about-text p {
-            color: #929cad;
-            line-height: 1.9;
+    box-shadow:0 0 20px #00e5ff;
 
-            margin-bottom: 15px;
-        }
+    top:10px;
+    left:50%;
+}
 
-        /* =========================
-           ANGGOTA
-        ========================= */
+/* =========================
+   GENERAL
+========================= */
 
-        #anggota {
-            background:
-                rgba(255,255,255,.018);
-        }
+section{
+    padding:110px 25px;
+}
 
-        .anggota {
-            display: grid;
+.container{
+    max-width:1150px;
+    margin:auto;
+}
 
-            grid-template-columns:
-                repeat(auto-fit,minmax(210px,1fr));
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-            gap: 20px;
-        }
+.section-label{
+    color:#00e5ff;
 
-        .member {
-            position: relative;
+    font-size:11px;
 
-            padding: 25px;
+    font-weight:900;
 
-            text-align: center;
+    text-transform:uppercase;
 
-            border-radius: 22px;
+    letter-spacing:4px;
+}
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.07),
-                    rgba(255,255,255,.025)
-                );
+.section-header h2{
+    font-size:43px;
 
-            border: 1px solid rgba(255,255,255,.08);
+    letter-spacing:-2px;
 
-            transition: .35s;
+    margin:13px 0;
+}
 
-            overflow: hidden;
-        }
+.section-header p{
+    max-width:600px;
 
-        .member:hover {
-            transform: translateY(-8px);
+    margin:auto;
 
-            border-color:
-                rgba(96,165,250,.4);
+    color:#858b95;
 
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.25);
-        }
+    line-height:1.8;
 
-        .member-photo {
-            width: 100px;
-            height: 100px;
+    font-size:14px;
+}
 
-            margin: 0 auto 18px;
+/* =========================
+   STATS
+========================= */
 
-            border-radius: 50%;
+.stats{
+    display:grid;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    grid-template-columns:
+        repeat(3,1fr);
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #1e3a8a,
-                    #7c3aed
-                );
+    gap:18px;
 
-            font-size: 34px;
+    margin-top:60px;
+}
 
-            border: 4px solid rgba(255,255,255,.08);
+.stat{
+    position:relative;
 
-            overflow: hidden;
-        }
+    padding:30px;
 
-        .member-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    text-align:center;
 
-        .member h3 {
-            font-size: 15px;
-            margin-bottom: 6px;
-        }
+    border-radius:20px;
 
-        .member p {
-            color: #718096;
-            font-size: 12px;
-        }
+    background:
+        rgba(255,255,255,.035);
 
-        /* =========================
-           CTA
-        ========================= */
+    border:1px solid rgba(255,255,255,.08);
 
-        .cta {
-            text-align: center;
+    transition:.3s;
+}
 
-            padding: 80px 25px;
+.stat:hover{
+    transform:translateY(-6px);
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #172554,
-                    #3b0764
-                );
+    border-color:
+        rgba(0,229,255,.25);
+}
 
-            border-top:
-                1px solid rgba(255,255,255,.08);
+.stat strong{
+    display:block;
 
-            border-bottom:
-                1px solid rgba(255,255,255,.08);
-        }
+    font-size:35px;
 
-        .cta h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+    margin-bottom:7px;
 
-        .cta p {
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
+    background:
+        linear-gradient(
+            90deg,
+            #00e5ff,
+            #fff
+        );
 
-        /* =========================
-           FOOTER
-        ========================= */
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        footer {
-            padding: 45px 25px;
+.stat span{
+    color:#737984;
 
-            text-align: center;
+    font-size:12px;
+}
 
-            background: #050812;
-        }
+/* =========================
+   ABOUT
+========================= */
 
-        footer h3 {
-            margin-bottom: 8px;
-        }
+.about-grid{
+    display:grid;
 
-        footer p {
-            color: #667085;
-            font-size: 13px;
-        }
+    grid-template-columns:.8fr 1.2fr;
 
-        /* =========================
-           ANIMATION
-        ========================= */
+    gap:70px;
 
-        .fade {
-            animation: fadeUp 1s ease forwards;
-        }
+    align-items:center;
+}
 
-        @keyframes fadeUp {
+.about-image{
+    min-height:380px;
 
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
+    position:relative;
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+    display:flex;
 
-        }
+    align-items:center;
+    justify-content:center;
 
-        /* =========================
-           MOBILE
-        ========================= */
+    border-radius:30px;
 
-        @media(max-width:850px) {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,229,255,.12),
+            transparent 60%
+        ),
+        #0d1117;
 
-            .nav-menu {
-                display: none;
-            }
+    border:1px solid rgba(255,255,255,.08);
 
-            .hero-container,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+    font-size:100px;
 
-            .hero {
-                padding-top: 120px;
-            }
+    box-shadow:
+        inset 0 0 80px rgba(0,0,0,.3);
+}
 
-            .hero-card {
-                min-height: 330px;
-            }
+.about-image::before{
+    content:"XII";
 
-            .year {
-                font-size: 75px;
-            }
+    position:absolute;
 
-            .stats {
-                grid-template-columns: 1fr;
-            }
+    top:20px;
+    left:25px;
 
-            .section-header h2 {
-                font-size: 34px;
-            }
+    font-size:12px;
 
-            .cta h2 {
-                font-size: 32px;
-            }
+    font-weight:800;
 
-        }
+    color:#00e5ff;
 
-        @media(max-width:500px) {
+    letter-spacing:3px;
+}
 
-            .hero h1 {
-                font-size: 50px;
-                letter-spacing: -3px;
-            }
+.about-text h3{
+    font-size:34px;
 
-            .hero p {
-                font-size: 15px;
-            }
+    letter-spacing:-1.5px;
 
-            section {
-                padding: 75px 18px;
-            }
+    margin:12px 0 20px;
+}
 
-            .member {
-                padding: 22px;
-            }
+.about-text p{
+    color:#9298a2;
 
-        }
-    </style>
+    line-height:1.9;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   ANGGOTA
+========================= */
+
+#anggota{
+    background:
+        rgba(255,255,255,.018);
+}
+
+.anggota{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(210px,1fr));
+
+    gap:18px;
+}
+
+.member{
+    padding:27px 20px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.02)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+}
+
+.member:hover{
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(0,229,255,.35);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.3);
+}
+
+.member-photo{
+    width:100px;
+    height:100px;
+
+    margin:0 auto 18px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f3036,
+            #18313d
+        );
+
+    border:2px solid rgba(0,229,255,.2);
+
+    font-size:34px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 30px rgba(0,229,255,.08);
+}
+
+.member-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.member h3{
+    font-size:14px;
+
+    margin-bottom:7px;
+}
+
+.member p{
+    color:#6f7680;
+
+    font-size:11px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    position:relative;
+
+    text-align:center;
+
+    padding:110px 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,229,255,.10),
+            transparent 50%
+        ),
+        #0b0e12;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+    font-size:45px;
+
+    letter-spacing:-2px;
+
+    margin-bottom:17px;
+}
+
+.cta p{
+    color:#8f969f;
+
+    margin-bottom:30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:50px 25px;
+
+    text-align:center;
+
+    background:#050608;
+}
+
+footer h3{
+    color:#00e5ff;
+
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#626872;
+
+    font-size:12px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.fade{
+    animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+        top:10px;
+
+        width:
+            calc(100% - 20px);
+    }
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero-container,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-card{
+        min-height:350px;
+    }
+
+    .year{
+        font-size:75px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .cta h2{
+        font-size:34px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:50px;
+
+        letter-spacing:-3px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    section{
+        padding:80px 18px;
+    }
+
+    .hero-card{
+        padding:25px;
+    }
+
+    .about-image{
+        min-height:280px;
+        font-size:75px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+
+<!-- NAVBAR -->
 
 <nav>
 
-    <div class="nav-container">
+<div class="nav-container">
 
-        <div class="logo">
+    <div class="logo">
 
-            <div class="logo-icon">
-                XI
-            </div>
-
-            <span>
-                RPL 1
-            </span>
-
+        <div class="logo-icon">
+            XII
         </div>
 
-        <ul class="nav-menu">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#tentang">Tentang</a>
-            </li>
-
-            <li>
-                <a href="#anggota">Anggota</a>
-            </li>
-
-            <li>
-                <a href="#kenangan">Kenangan</a>
-            </li>
-
-        </ul>
+        <span>
+            RPL 1
+        </span>
 
     </div>
+
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#tentang">Tentang</a>
+        </li>
+
+        <li>
+            <a href="#anggota">Anggota</a>
+        </li>
+
+        <li>
+            <a href="#kenangan">Kenangan</a>
+        </li>
+
+    </ul>
+
+</div>
 
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-    <div class="hero-container">
-
-        <div class="fade">
-
-            <div class="badge">
-                ANGKATAN 2026
-            </div>
-
-            <h1>
-                XI RPL 1
-                <br>
-
-                <span class="gradient-text">
-                    One Class.
-                </span>
-
-                <br>
-
-                One Story.
-            </h1>
-
-            <p>
-                Satu kelas, banyak cerita.
-                Bersama belajar, berkembang,
-                berjuang, dan menciptakan
-                kenangan yang akan selalu dikenang.
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    href="#anggota"
-                    class="btn btn-primary"
-                >
-                    Lihat Anggota →
-                </a>
-
-                <a
-                    href="#tentang"
-                    class="btn btn-secondary"
-                >
-                    Tentang Kami
-                </a>
-
-            </div>
-
-        </div>
+<div class="hero-container">
 
 
-        <div class="hero-card fade">
+<div class="fade">
 
-            <div class="card-content">
-
-                <div>
-                    <div class="year">
-                        2026
-                    </div>
-                </div>
-
-                <div class="hero-info">
-
-                    <h2>
-                        XI RPL 1
-                    </h2>
-
-                    <p>
-                        Rekayasa Perangkat Lunak
-                        • Satu kelas, satu keluarga.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="badge">
+        ANGKATAN 2026
     </div>
 
-</section>
 
+    <h1>
 
-<!-- =========================
-     STATISTIK
-========================= -->
+        XII RPL 1
 
-<section>
+        <br>
 
-    <div class="container">
+        <span class="gradient-text">
+            One Class.
+        </span>
 
-        <div class="section-header">
+        <br>
 
-            <div class="section-label">
-                Our Class
-            </div>
+        One Story.
 
-            <h2>
-                Tentang Kelas
-            </h2>
+    </h1>
 
-            <p>
-                Sebuah perjalanan yang terdiri dari
-                banyak cerita, tawa, perjuangan,
-                dan kebersamaan.
-            </p>
 
-        </div>
+    <p>
 
+        Satu kelas, banyak cerita.
+        Bersama belajar, berkembang,
+        berjuang, dan menciptakan
+        kenangan yang akan selalu dikenang.
 
-        <div class="stats">
+    </p>
 
-            <div class="stat">
 
-                <strong>
-                    15+
-                </strong>
-
-                <span>
-                    Anggota Kelas
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    2026
-                </strong>
-
-                <span>
-                    Angkatan
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    XI RPL 1
-                </strong>
-
-                <span>
-                    Kelas
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     TENTANG
-========================= -->
-
-<section id="tentang">
-
-    <div class="container">
-
-        <div class="about-grid">
-
-            <div class="about-image">
-                👨‍💻
-            </div>
-
-
-            <div class="about-text">
-
-                <div class="section-label">
-                    Tentang Kami
-                </div>
-
-                <h3>
-                    Bukan Sekadar Teman Sekelas
-                </h3>
-
-                <p>
-                    Kami adalah keluarga besar
-                    XI RPL 1. Bersama-sama belajar
-                    mengenai dunia teknologi,
-                    pemrograman, dan berbagai hal
-                    baru.
-                </p>
-
-                <p>
-                    Tidak semuanya selalu berjalan
-                    mudah. Ada tugas, ujian,
-                    deadline, kesalahan coding,
-                    dan berbagai tantangan.
-                </p>
-
-                <p>
-                    Namun justru dari semua itu
-                    tercipta cerita yang membuat
-                    perjalanan sekolah menjadi
-                    lebih berkesan.
-                </p>
-
-                <p>
-                    <b>
-                        Wali Kelas:
-                    </b>
-                    Bapak/Ibu Guru
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     ANGGOTA
-========================= -->
-
-<section id="anggota">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                Our People
-            </div>
-
-            <h2>
-                Anggota Kelas
-            </h2>
-
-            <p>
-                Kenalan dengan keluarga besar
-                XI RPL 1.
-            </p>
-
-        </div>
-
-
-        <div class="anggota">
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨‍💻
-                </div>
-
-                <h3>
-                    Muhammad Yusuf Kurniawan
-                </h3>
-
-                <p>
-                    Ketua Kelas
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩‍💻
-                </div>
-
-                <h3>
-                    Lutfiana Zakiyah
-                </h3>
-
-                <p>
-                    Wakil Ketua
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Sarah Amelia
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨
-                </div>
-
-                <h3>
-                    Muhammad Romi Jatmiko
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨‍💻
-                </div>
-
-                <h3>
-                    Muhammad Khalid Asy-Sya'bani
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨
-                </div>
-
-                <h3>
-                    Muhammad Setya Dinan
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨
-                </div>
-
-                <h3>
-                    Adil Fatwa Al-Hadad
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨
-                </div>
-
-                <h3>
-                    Adzam Lukamnul Dzaki
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Septiana
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Maratun Nifiyah
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Afifah
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Lutviana Nur Aini
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Adzkia
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👩
-                </div>
-
-                <h3>
-                    Karisma Adiesta
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-            <div class="member">
-
-                <div class="member-photo">
-                    👨
-                </div>
-
-                <h3>
-                    Destamel Januari Nur Langit
-                </h3>
-
-                <p>
-                    Anggota
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta" id="kenangan">
-
-    <div class="container">
-
-        <h2>
-            Satu Kelas.
-            <br>
-            Seribu Kenangan.
-        </h2>
-
-        <p>
-            Setiap hari mungkin berlalu,
-            tapi cerita kita akan tetap menjadi bagian
-            dari perjalanan ini.
-        </p>
+    <div class="buttons">
 
         <a
-            href="#home"
-            class="btn btn-primary"
-        >
-            Kembali ke Atas ↑
+            href="#anggota"
+            class="btn btn-primary">
+
+            Lihat Anggota →
+
+        </a>
+
+
+        <a
+            href="#tentang"
+            class="btn btn-secondary">
+
+            Tentang Kami
+
         </a>
 
     </div>
 
+</div>
+
+
+<!-- HERO CARD -->
+
+<div class="hero-card fade">
+
+    <div class="circle"></div>
+
+    <div class="card-content">
+
+        <div>
+
+            <div class="year">
+                2026
+            </div>
+
+        </div>
+
+
+        <div class="hero-info">
+
+            <h2>
+                XII RPL 1
+            </h2>
+
+            <p>
+                Rekayasa Perangkat Lunak
+                • Satu kelas, satu keluarga.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- STATISTIK -->
 
-<footer>
+<section>
 
-    <h3>
-        XI RPL 1
-    </h3>
+<div class="container">
+
+<div class="section-header">
+
+    <div class="section-label">
+        OUR CLASS
+    </div>
+
+    <h2>
+        Tentang Kelas
+    </h2>
 
     <p>
-        Angkatan 2026 • Rekayasa Perangkat Lunak
+        Sebuah perjalanan yang terdiri dari
+        banyak cerita, tawa, perjuangan,
+        dan kebersamaan.
     </p>
+
+</div>
+
+
+<div class="stats">
+
+
+<div class="stat">
+
+    <strong>
+        15+
+    </strong>
+
+    <span>
+        Anggota Kelas
+    </span>
+
+</div>
+
+
+<div class="stat">
+
+    <strong>
+        2026
+    </strong>
+
+    <span>
+        Angkatan
+    </span>
+
+</div>
+
+
+<div class="stat">
+
+    <strong>
+        XII RPL 1
+    </strong>
+
+    <span>
+        Kelas
+    </span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TENTANG -->
+
+<section id="tentang">
+
+<div class="container">
+
+<div class="about-grid">
+
+
+<div class="about-image">
+
+    👨‍💻
+
+</div>
+
+
+<div class="about-text">
+
+    <div class="section-label">
+        TENTANG KAMI
+    </div>
+
+    <h3>
+        Bukan Sekadar Teman Sekelas
+    </h3>
+
+
+    <p>
+        Kami adalah keluarga besar
+        XII RPL 1. Bersama-sama belajar
+        mengenai dunia teknologi,
+        pemrograman, dan berbagai hal
+        baru.
+    </p>
+
+
+    <p>
+        Tidak semuanya selalu berjalan
+        mudah. Ada tugas, ujian,
+        deadline, kesalahan coding,
+        dan berbagai tantangan.
+    </p>
+
+
+    <p>
+        Namun justru dari semua itu
+        tercipta cerita yang membuat
+        perjalanan sekolah menjadi
+        lebih berkesan.
+    </p>
+
+
+    <p>
+        <b>Wali Kelas:</b>
+        Bapak/Ibu Guru
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ANGGOTA -->
+
+<section id="anggota">
+
+<div class="container">
+
+
+<div class="section-header">
+
+    <div class="section-label">
+        OUR PEOPLE
+    </div>
+
+    <h2>
+        Anggota Kelas
+    </h2>
+
+    <p>
+        Kenalan dengan keluarga besar
+        XII RPL 1.
+    </p>
+
+</div>
+
+
+<div class="anggota">
+
+
+<!-- 1 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨‍💻
+</div>
+
+<h3>
+    Muhammad Yusuf Kurniawan
+</h3>
+
+<p>
+    Ketua Kelas
+</p>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩‍💻
+</div>
+
+<h3>
+    Lutfiana Zakiyah
+</h3>
+
+<p>
+    Wakil Ketua
+</p>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Sarah Amelia
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨
+</div>
+
+<h3>
+    Muhammad Romi Jatmiko
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨‍💻
+</div>
+
+<h3>
+    Muhammad Khalid Asy-Sya'bani
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨
+</div>
+
+<h3>
+    Muhammad Setya Dinan
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨
+</div>
+
+<h3>
+    Adil Fatwa Al-Hadad
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨
+</div>
+
+<h3>
+    Adzam Lukamnul Dzaki
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Septiana
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Maratun Nifiyah
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Afifah
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Lutviana Nur Aini
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Adzkia
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👩
+</div>
+
+<h3>
+    Karisma Adiesta
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="member">
+
+<div class="member-photo">
+    👨
+</div>
+
+<h3>
+    Destamel Januari Nur Langit
+</h3>
+
+<p>
+    Anggota
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section
+class="cta"
+id="kenangan">
+
+<div class="container">
+
+<h2>
+
+    Satu Kelas.
 
     <br>
 
-    <p>
-        © 2026 XI RPL 1.
-        Made with ❤️ by our class.
-    </p>
+    Seribu Kenangan.
+
+</h2>
+
+
+<p>
+
+    Setiap hari mungkin berlalu,
+    tapi cerita kita akan tetap menjadi bagian
+    dari perjalanan ini.
+
+</p>
+
+
+<a
+href="#home"
+class="btn btn-primary">
+
+    Kembali ke Atas ↑
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+    XII RPL 1
+</h3>
+
+<p>
+    Angkatan 2026 • Rekayasa Perangkat Lunak
+</p>
+
+<br>
+
+<p>
+    © 2026 XII RPL 1.
+    Made with ❤️ by our class.
+</p>
 
 </footer>
 
 
 <script>
 
-    function sapa() {
+function sapa(){
 
-        alert(
-            "Salam dari keluarga XI RPL 1! 🎉"
-        );
+    alert(
+        "Salam dari keluarga XII RPL 1! 🎉"
+    );
 
-    }
+}
 
-</script>
-
-</body>
-</html>
+</script
