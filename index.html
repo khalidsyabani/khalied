@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>XII RPL x TSM | Angkatan 2026</title>
 
-<title>XII RPL x TSM | Angkatan 2026</title>
+    <meta name="description"
+          content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
 
-<!-- FAVICON XII -->
-<link rel="icon" type="image/svg+xml"
-href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230b0e12'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='900' fill='%2300e5ff'%3EXII%3C/text%3E%3C/svg%3E">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<meta name="description"
-content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
+    <!-- FAVICON XII -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%230b0e12' stroke='%2300e5ff' stroke-width='4'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='900' fill='%2300e5ff'%3EXII%3C/text%3E%3C/svg%3E"
+    >
+
     <style>
-     
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -29,60 +40,59 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #080a0d;
-            color: #fff;
+            font-family: "Inter", sans-serif;
+            background: #07090d;
+            color: #ffffff;
             overflow-x: hidden;
+        }
 
-            background-image:
-                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-            background-size: 50px 50px;
+        button {
+            font-family: inherit;
         }
 
 
         /* =========================
-           BACKGROUND PREMIUM
+           BACKGROUND
         ========================= */
 
         body::before {
             content: "";
             position: fixed;
-
-            width: 600px;
-            height: 600px;
-
-            background: #00e5ff;
-
-            filter: blur(180px);
-
-            opacity: .10;
-
-            top: -250px;
-            left: -180px;
-
+            inset: 0;
+            pointer-events: none;
             z-index: -2;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
         }
 
         body::after {
             content: "";
-
             position: fixed;
-
-            width: 600px;
-            height: 600px;
-
-            background: #ff7a00;
-
-            filter: blur(190px);
-
-            opacity: .08;
-
-            right: -250px;
-            bottom: -250px;
-
-            z-index: -2;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(0,229,255,.06);
+            filter: blur(100px);
+            top: -200px;
+            left: -200px;
+            pointer-events: none;
+            z-index: -1;
         }
 
 
@@ -92,111 +102,106 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
 
         nav {
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
 
-            top: 15px;
-            left: 50%;
+            background: rgba(7,9,13,.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
 
-            transform: translateX(-50%);
-
-            width: calc(100% - 35px);
-            max-width: 1150px;
-
-            z-index: 999;
-
-            background: rgba(10,13,17,.75);
-
-            backdrop-filter: blur(20px);
-
-            border: 1px solid rgba(255,255,255,.09);
-
-            border-radius: 18px;
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.35);
+            border-bottom: 1px solid rgba(255,255,255,.06);
         }
 
-
         .nav-container {
-            height: 70px;
+            max-width: 1200px;
+            margin: auto;
 
-            padding: 0 22px;
+            height: 74px;
+
+            padding: 0 25px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
         }
 
-
         .logo {
             display: flex;
-
             align-items: center;
+            gap: 12px;
 
-            gap: 11px;
-
-            font-size: 16px;
-
-            font-weight: 800;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: -.5px;
         }
 
-
         .logo-icon {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
-            border-radius: 13px;
+            border-radius: 50%;
 
-            color: #05080a;
+            border: 1px solid rgba(0,229,255,.5);
 
             background:
-                linear-gradient(
-                    135deg,
-                    #00e5ff,
-                    #7cfff2
+                radial-gradient(
+                    circle,
+                    rgba(0,229,255,.16),
+                    rgba(0,229,255,.03)
                 );
 
+            color: #00e5ff;
+
             box-shadow:
-                0 0 25px rgba(0,229,255,.25);
-        }
-
-
-        .nav-menu {
-            display: flex;
-
-            gap: 8px;
-
-            list-style: none;
-        }
-
-
-        .nav-menu a {
-            color: #9ca3af;
-
-            text-decoration: none;
-
-            padding: 10px 14px;
-
-            border-radius: 10px;
+                0 0 25px rgba(0,229,255,.15);
 
             font-size: 13px;
+            font-weight: 900;
+        }
 
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            position: relative;
+
+            color: #9da5b1;
+            font-size: 13px;
             font-weight: 600;
 
             transition: .3s;
         }
 
+        .nav-links a:hover {
+            color: #00e5ff;
+        }
 
-        .nav-menu a:hover {
-            color: #fff;
+        .nav-links a::after {
+            content: "";
+            position: absolute;
 
-            background: rgba(255,255,255,.07);
+            left: 0;
+            bottom: -8px;
+
+            width: 0;
+            height: 2px;
+
+            background: #00e5ff;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
 
@@ -205,79 +210,54 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         ========================= */
 
         .hero {
-            min-height: 100vh;
+            max-width: 1200px;
+            margin: auto;
 
-            display: flex;
-
-            align-items: center;
+            min-height: 760px;
 
             padding: 150px 25px 80px;
 
-            position: relative;
-        }
-
-
-        .hero-container {
-            width: 100%;
-
-            max-width: 1150px;
-
-            margin: auto;
-
             display: grid;
-
-            grid-template-columns: 1.05fr .95fr;
-
-            gap: 80px;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 60px;
 
             align-items: center;
         }
 
-
-        .badge {
+        .hero-badge {
             display: inline-flex;
-
             align-items: center;
+            gap: 8px;
 
-            gap: 9px;
+            padding: 9px 14px;
 
-            padding: 8px 14px;
-
-            border-radius: 50px;
-
-            color: #67e8f9;
+            border-radius: 100px;
 
             background: rgba(0,229,255,.07);
-
             border: 1px solid rgba(0,229,255,.2);
 
+            color: #00e5ff;
+
             font-size: 11px;
-
             font-weight: 800;
+            letter-spacing: 1.5px;
 
-            letter-spacing: 1px;
-
-            margin-bottom: 24px;
+            margin-bottom: 25px;
         }
 
-
-        .badge::before {
-            content: "";
-
-            width: 7px;
-            height: 7px;
-
+        .hero-badge span {
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
 
             background: #00e5ff;
 
             box-shadow:
-                0 0 15px #00e5ff;
+                0 0 10px #00e5ff;
         }
 
-
         .hero h1 {
-            font-size: clamp(50px,7vw,88px);
+            font-size: clamp(45px, 7vw, 82px);
 
             line-height: .95;
 
@@ -286,101 +266,79 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
             margin-bottom: 28px;
         }
 
-
-        .gradient-text {
-            background:
-                linear-gradient(
-                    90deg,
-                    #00e5ff,
-                    #ffffff,
-                    #ff9d45
-                );
-
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
+        .hero h1 span {
+            display: block;
+            color: #00e5ff;
         }
 
+        .hero h1 .orange {
+            color: #ff7a00;
+        }
 
-        .hero p {
-            max-width: 610px;
+        .hero-text {
+            max-width: 570px;
 
-            color: #9ca3af;
-
-            font-size: 16px;
+            color: #8f97a3;
 
             line-height: 1.8;
 
-            margin-bottom: 32px;
+            font-size: 15px;
+
+            margin-bottom: 35px;
         }
 
-
-        /* BUTTON */
-
-        .buttons {
+        .hero-buttons {
             display: flex;
-
             gap: 12px;
-
             flex-wrap: wrap;
         }
 
-
         .btn {
             display: inline-flex;
-
             align-items: center;
-
             justify-content: center;
 
-            padding: 14px 21px;
+            min-height: 48px;
+
+            padding: 0 22px;
 
             border-radius: 12px;
 
-            text-decoration: none;
-
             font-size: 13px;
-
             font-weight: 800;
+
+            cursor: pointer;
 
             transition: .3s;
         }
 
-
         .btn-primary {
-            color: #031014;
+            color: #061014;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #00e5ff,
-                    #7cfff2
-                );
+            background: #00e5ff;
 
             box-shadow:
-                0 10px 30px rgba(0,229,255,.18);
+                0 0 30px rgba(0,229,255,.2);
         }
-
 
         .btn-primary:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
 
             box-shadow:
-                0 18px 45px rgba(0,229,255,.28);
+                0 10px 35px rgba(0,229,255,.25);
         }
-
 
         .btn-secondary {
-            color: #d1d5db;
-
-            background: rgba(255,255,255,.04);
+            color: #fff;
 
             border: 1px solid rgba(255,255,255,.1);
+
+            background: rgba(255,255,255,.035);
         }
 
-
         .btn-secondary:hover {
-            background: rgba(255,255,255,.08);
+            border-color: rgba(0,229,255,.3);
+            transform: translateY(-3px);
         }
 
 
@@ -391,29 +349,36 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         .hero-card {
             position: relative;
 
-            min-height: 470px;
-
-            padding: 35px;
+            min-height: 430px;
 
             border-radius: 30px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.08),
-                    rgba(255,255,255,.025)
-                );
-
-            border: 1px solid rgba(255,255,255,.1);
-
-            backdrop-filter: blur(20px);
+            padding: 45px;
 
             overflow: hidden;
 
-            box-shadow:
-                0 35px 80px rgba(0,0,0,.4);
-        }
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
 
+            background:
+                radial-gradient(
+                    circle at 30% 20%,
+                    rgba(0,229,255,.13),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(255,122,0,.1),
+                    transparent 35%
+                ),
+                #0d1117;
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            box-shadow:
+                0 40px 100px rgba(0,0,0,.4);
+        }
 
         .hero-card::before {
             content: "";
@@ -423,177 +388,109 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
             width: 250px;
             height: 250px;
 
-            border-radius: 50%;
-
-            background: #00e5ff;
-
-            filter: blur(90px);
-
-            opacity: .18;
-
             top: -100px;
             right: -80px;
-        }
-
-
-        .hero-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 220px;
-            height: 220px;
 
             border-radius: 50%;
-
-            background: #ff7a00;
-
-            filter: blur(90px);
-
-            opacity: .13;
-
-            bottom: -100px;
-            left: -80px;
-        }
-
-
-        .card-content {
-            height: 100%;
-
-            position: relative;
-
-            z-index: 2;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-        }
-
-
-        .year {
-            font-size: 110px;
-
-            font-weight: 900;
-
-            letter-spacing: -10px;
-
-            color: rgba(255,255,255,.9);
-        }
-
-
-        .hero-info {
-            padding-top: 120px;
-        }
-
-
-        .hero-info h2 {
-            font-size: 30px;
-
-            margin-bottom: 8px;
-        }
-
-
-        .hero-info p {
-            margin: 0;
-
-            font-size: 13px;
-
-            color: #9ca3af;
-        }
-
-
-        .circle {
-            position: absolute;
-
-            width: 120px;
-            height: 120px;
 
             border: 1px solid rgba(0,229,255,.2);
 
-            border-radius: 50%;
-
-            right: 45px;
-            top: 150px;
+            box-shadow:
+                0 0 0 35px rgba(0,229,255,.025),
+                0 0 0 70px rgba(0,229,255,.02);
         }
 
-
-        .circle::after {
-            content: "";
-
+        .hero-year {
             position: absolute;
 
-            width: 7px;
-            height: 7px;
+            top: 40px;
+            left: 45px;
 
-            border-radius: 50%;
+            font-size: 100px;
+            line-height: 1;
 
-            background: #00e5ff;
+            font-weight: 900;
 
-            box-shadow:
-                0 0 20px #00e5ff;
+            color: rgba(255,255,255,.04);
 
-            top: 10px;
-            left: 50%;
+            letter-spacing: -8px;
+        }
+
+        .hero-card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card-label {
+            color: #00e5ff;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero-card h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .hero-card p {
+            color: #7e8794;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            max-width: 370px;
         }
 
 
         /* =========================
-           GENERAL
+           SECTION
         ========================= */
 
         section {
+            max-width: 1200px;
+
+            margin: auto;
+
             padding: 110px 25px;
         }
 
-
-        .container {
-            max-width: 1150px;
-
-            margin: auto;
+        .section-heading {
+            margin-bottom: 50px;
         }
-
-
-        .section-header {
-            text-align: center;
-
-            margin-bottom: 60px;
-        }
-
 
         .section-label {
             color: #00e5ff;
 
             font-size: 11px;
-
             font-weight: 900;
 
-            text-transform: uppercase;
+            letter-spacing: 2px;
 
-            letter-spacing: 4px;
+            margin-bottom: 12px;
         }
 
-
-        .section-header h2 {
-            font-size: 43px;
+        .section-heading h2 {
+            font-size: clamp(32px,5vw,52px);
 
             letter-spacing: -2px;
 
-            margin: 13px 0;
+            margin-bottom: 14px;
         }
 
-
-        .section-header p {
+        .section-heading p {
             max-width: 600px;
 
-            margin: auto;
-
-            color: #858b95;
-
-            line-height: 1.8;
+            color: #7f8793;
 
             font-size: 14px;
+
+            line-height: 1.8;
         }
 
 
@@ -602,65 +499,48 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         ========================= */
 
         .stats {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 0 25px 80px;
+
             display: grid;
+            grid-template-columns: repeat(3,1fr);
 
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 18px;
-
-            margin-top: 60px;
+            gap: 15px;
         }
 
-
         .stat {
-            position: relative;
+            padding: 28px;
 
-            padding: 30px;
+            border-radius: 18px;
 
-            text-align: center;
+            background: rgba(255,255,255,.025);
 
-            border-radius: 20px;
-
-            background:
-                rgba(255,255,255,.035);
-
-            border: 1px solid rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.06);
 
             transition: .3s;
         }
 
-
         .stat:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
 
-            border-color:
-                rgba(0,229,255,.25);
+            border-color: rgba(0,229,255,.2);
         }
 
+        .stat-number {
+            color: #00e5ff;
 
-        .stat strong {
-            display: block;
+            font-size: 32px;
 
-            font-size: 35px;
+            font-weight: 900;
 
             margin-bottom: 7px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #00e5ff,
-                    #fff
-                );
-
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
         }
 
-
-        .stat span {
-            color: #737984;
+        .stat p {
+            color: #7e8793;
 
             font-size: 12px;
         }
@@ -673,190 +553,160 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         .about-grid {
             display: grid;
 
-            grid-template-columns: .8fr 1.2fr;
+            grid-template-columns: 1fr 1fr;
 
-            gap: 70px;
-
-            align-items: center;
+            gap: 20px;
         }
 
+        .about-card {
+            padding: 35px;
 
-        .about-image {
-            min-height: 380px;
-
-            position: relative;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 30px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(0,229,255,.12),
-                    transparent 60%
-                ),
-                #0d1117;
-
-            border: 1px solid rgba(255,255,255,.08);
-
-            font-size: 100px;
-
-            box-shadow:
-                inset 0 0 80px rgba(0,0,0,.3);
-        }
-
-
-        .about-image::before {
-            content: "XII";
-
-            position: absolute;
-
-            top: 20px;
-            left: 25px;
-
-            font-size: 12px;
-
-            font-weight: 800;
-
-            color: #00e5ff;
-
-            letter-spacing: 3px;
-        }
-
-
-        .about-text h3 {
-            font-size: 34px;
-
-            letter-spacing: -1.5px;
-
-            margin: 12px 0 20px;
-        }
-
-
-        .about-text p {
-            color: #9298a2;
-
-            line-height: 1.9;
-
-            font-size: 14px;
-
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           ANGGOTA
-        ========================= */
-
-        #anggota {
-            background:
-                rgba(255,255,255,.018);
-        }
-
-
-        .anggota {
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit,minmax(210px,1fr));
-
-            gap: 18px;
-        }
-
-
-        .member {
-            padding: 27px 20px;
-
-            text-align: center;
+            min-height: 230px;
 
             border-radius: 22px;
 
             background:
                 linear-gradient(
                     145deg,
-                    rgba(255,255,255,.065),
-                    rgba(255,255,255,.02)
+                    rgba(255,255,255,.045),
+                    rgba(255,255,255,.015)
                 );
 
-            border: 1px solid rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.07);
 
-            transition: .35s;
+            transition: .3s;
         }
 
+        .about-card:hover {
+            transform: translateY(-5px);
 
-        .member:hover {
-            transform: translateY(-8px);
-
-            border-color:
-                rgba(0,229,255,.35);
-
-            box-shadow:
-                0 25px 50px rgba(0,0,0,.3);
+            border-color: rgba(0,229,255,.2);
         }
 
-
-        .member-photo {
-            width: 100px;
-            height: 100px;
-
-            margin: 0 auto 18px;
+        .about-icon {
+            width: 45px;
+            height: 45px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
-            border-radius: 50%;
+            border-radius: 13px;
+
+            margin-bottom: 22px;
+
+            background: rgba(0,229,255,.08);
+
+            color: #00e5ff;
+
+            font-size: 20px;
+        }
+
+        .about-card h3 {
+            margin-bottom: 12px;
+
+            font-size: 18px;
+        }
+
+        .about-card p {
+            color: #858e9b;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           MEMBERS
+        ========================= */
+
+        .members-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 15px;
+        }
+
+        .member {
+            position: relative;
+
+            padding: 24px;
+
+            border-radius: 18px;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #0f3036,
-                    #18313d
-                );
+                rgba(255,255,255,.025);
 
-            border: 2px solid rgba(0,229,255,.2);
+            border: 1px solid rgba(255,255,255,.06);
 
-            font-size: 34px;
+            transition: .3s;
 
             overflow: hidden;
-
-            box-shadow:
-                0 0 30px rgba(0,229,255,.08);
         }
 
+        .member::before {
+            content: "";
 
-        .member-photo img {
-            width: 100%;
-            height: 100%;
+            position: absolute;
 
-            object-fit: cover;
+            width: 80px;
+            height: 80px;
+
+            right: -35px;
+            top: -35px;
+
+            border-radius: 50%;
+
+            background: rgba(0,229,255,.05);
         }
 
+        .member:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(0,229,255,.25);
+        }
+
+        .member-number {
+            color: #00e5ff;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 13px;
+        }
 
         .member h3 {
             font-size: 14px;
 
-            margin-bottom: 7px;
+            line-height: 1.5;
+
+            margin-bottom: 6px;
         }
 
-
         .member p {
-            color: #6f7680;
+            color: #777f8c;
 
             font-size: 11px;
         }
 
 
         /* =========================
-           FOTO KENANGAN
+           GALLERY
         ========================= */
 
         #kenangan {
+            max-width: none;
+
+            padding-left: 0;
+            padding-right: 0;
+
             background:
                 radial-gradient(
                     circle at 20% 30%,
@@ -870,19 +720,50 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
                 );
         }
 
+        .gallery-section-inner {
+            max-width: 1200px;
 
-        .gallery {
-            display: grid;
+            margin: auto;
 
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 18px;
+            padding: 0 25px;
         }
 
+        .gallery-wrapper {
+            position: relative;
+        }
+
+        .gallery {
+            display: flex;
+
+            gap: 18px;
+
+            overflow-x: auto;
+
+            scroll-snap-type: x mandatory;
+
+            scroll-behavior: smooth;
+
+            padding: 10px 5px 25px;
+
+            scrollbar-width: none;
+
+            -webkit-overflow-scrolling: touch;
+
+            cursor: grab;
+        }
+
+        .gallery:active {
+            cursor: grabbing;
+        }
+
+        .gallery::-webkit-scrollbar {
+            display: none;
+        }
 
         .gallery-item {
             position: relative;
+
+            flex: 0 0 340px;
 
             height: 280px;
 
@@ -897,9 +778,19 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
             box-shadow:
                 0 20px 45px rgba(0,0,0,.25);
 
-            cursor: pointer;
+            scroll-snap-align: center;
+
+            transition:
+                border-color .3s,
+                transform .3s;
+
+            user-select: none;
         }
 
+        .gallery-item:first-child {
+            flex-basis: 420px;
+            height: 320px;
+        }
 
         .gallery-item img {
             width: 100%;
@@ -909,9 +800,11 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
 
             display: block;
 
-            transition: .5s ease;
-        }
+            transition:
+                transform .5s ease;
 
+            pointer-events: none;
+        }
 
         .gallery-item::after {
             content: "";
@@ -923,18 +816,23 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
             background:
                 linear-gradient(
                     to top,
-                    rgba(0,0,0,.8),
+                    rgba(0,0,0,.85),
                     transparent 55%
                 );
 
             opacity: .8;
+
+            pointer-events: none;
         }
 
+        .gallery-item:hover {
+            border-color:
+                rgba(0,229,255,.4);
+        }
 
         .gallery-item:hover img {
-            transform: scale(1.08);
+            transform: scale(1.07);
         }
-
 
         .gallery-caption {
             position: absolute;
@@ -943,15 +841,15 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
             bottom: 18px;
 
             z-index: 2;
-        }
 
+            pointer-events: none;
+        }
 
         .gallery-caption h3 {
             font-size: 15px;
 
             margin-bottom: 4px;
         }
-
 
         .gallery-caption p {
             color: #a1a8b3;
@@ -960,12 +858,66 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         }
 
 
-        /* FOTO UTAMA LEBIH BESAR */
+        /* =========================
+           GALLERY BUTTON
+        ========================= */
 
-        .gallery-item:first-child {
-            grid-column: span 2;
+        .gallery-controls {
+            display: flex;
 
-            height: 380px;
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            margin-top: 15px;
+        }
+
+        .gallery-btn {
+            width: 46px;
+            height: 46px;
+
+            border: 1px solid
+                rgba(0,229,255,.25);
+
+            border-radius: 50%;
+
+            color: #00e5ff;
+
+            background:
+                rgba(0,229,255,.06);
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .gallery-btn:hover {
+            color: #061014;
+
+            background: #00e5ff;
+
+            transform:
+                translateY(-3px);
+        }
+
+        .gallery-hint {
+            color: #737984;
+
+            font-size: 12px;
+
+            text-align: center;
+
+            margin-top: 15px;
+        }
+
+        .gallery-hint span {
+            color: #00e5ff;
+
+            font-weight: 700;
         }
 
 
@@ -974,41 +926,55 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         ========================= */
 
         .cta {
+            max-width: 1200px;
+
+            margin: 30px auto 110px;
+
+            padding: 0 25px;
+        }
+
+        .cta-box {
             position: relative;
+
+            overflow: hidden;
+
+            padding: 65px 45px;
+
+            border-radius: 28px;
 
             text-align: center;
 
-            padding: 110px 25px;
-
             background:
                 radial-gradient(
-                    circle at center,
-                    rgba(0,229,255,.10),
+                    circle at 50% 0%,
+                    rgba(0,229,255,.12),
                     transparent 50%
                 ),
-                #0b0e12;
+                #0c1015;
 
-            border-top:
-                1px solid rgba(255,255,255,.08);
-
-            border-bottom:
-                1px solid rgba(255,255,255,.08);
+            border:
+                1px solid rgba(0,229,255,.12);
         }
 
-
-        .cta h2 {
-            font-size: 45px;
+        .cta-box h2 {
+            font-size:
+                clamp(30px,5vw,48px);
 
             letter-spacing: -2px;
 
-            margin-bottom: 17px;
+            margin-bottom: 15px;
         }
 
+        .cta-box p {
+            max-width: 550px;
 
-        .cta p {
-            color: #8f969f;
+            margin: 0 auto 25px;
 
-            margin-bottom: 30px;
+            color: #818996;
+
+            line-height: 1.8;
+
+            font-size: 13px;
         }
 
 
@@ -1017,799 +983,962 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
         ========================= */
 
         footer {
-            padding: 50px 25px;
+            border-top:
+                1px solid rgba(255,255,255,.06);
+
+            padding: 35px 25px;
 
             text-align: center;
 
-            background: #050608;
+            color: #626a76;
+
+            font-size: 11px;
         }
 
-
-        footer h3 {
+        footer strong {
             color: #00e5ff;
-
-            margin-bottom: 8px;
-        }
-
-
-        footer p {
-            color: #626872;
-
-            font-size: 12px;
         }
 
 
         /* =========================
-           ANIMATION
+           RESPONSIVE
         ========================= */
 
-        .fade {
-            animation:
-                fadeUp 1s ease forwards;
-        }
-
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-
-                transform:
-                    translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
-
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media(max-width:850px) {
-
-            nav {
-                top: 10px;
-
-                width:
-                    calc(100% - 20px);
-            }
-
-
-            .nav-menu {
-                display: none;
-            }
-
-
-            .hero-container,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
+        @media(max-width: 900px) {
 
             .hero {
-                padding-top: 120px;
-            }
+                grid-template-columns: 1fr;
 
+                padding-top: 130px;
+
+                min-height: auto;
+            }
 
             .hero-card {
                 min-height: 350px;
             }
 
-
-            .year {
-                font-size: 75px;
+            .members-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
             }
-
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-
-            .section-header h2 {
-                font-size: 34px;
-            }
-
-
-            .cta h2 {
-                font-size: 34px;
-            }
-
-
-            .gallery {
-                grid-template-columns: 1fr 1fr;
-            }
-
-
-            .gallery-item:first-child {
-                grid-column: span 2;
-            }
-
         }
 
 
-        @media(max-width:500px) {
+        @media(max-width: 700px) {
+
+            .nav-container {
+                height: 65px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .nav-links a:nth-child(2) {
+                display: none;
+            }
+
+            .hero {
+                padding:
+                    115px 20px 70px;
+            }
 
             .hero h1 {
-                font-size: 50px;
-
                 letter-spacing: -3px;
             }
 
+            .stats {
+                grid-template-columns: 1fr;
 
-            .hero p {
+                padding:
+                    0 20px 50px;
+            }
+
+            section {
+                padding:
+                    80px 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-section-inner {
+                padding:
+                    0 20px;
+            }
+
+            .cta {
+                padding: 0 20px;
+            }
+        }
+
+
+        @media(max-width: 500px) {
+
+            .logo {
                 font-size: 14px;
             }
 
+            .logo-icon {
+                width: 34px;
+                height: 34px;
 
-            section {
-                padding: 80px 18px;
+                font-size: 11px;
             }
 
+            .nav-links {
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
 
             .hero-card {
-                padding: 25px;
+                padding: 30px;
+
+                min-height: 310px;
             }
 
-
-            .about-image {
-                min-height: 280px;
+            .hero-year {
+                left: 30px;
+                top: 30px;
 
                 font-size: 75px;
             }
 
-
             .gallery {
-                grid-template-columns: 1fr;
+                gap: 14px;
             }
-
 
             .gallery-item,
             .gallery-item:first-child {
-                grid-column: span 1;
+                flex: 0 0 82vw;
 
                 height: 250px;
             }
 
+            .gallery-btn {
+                width: 42px;
+                height: 42px;
+            }
+
+            .cta-box {
+                padding:
+                    45px 25px;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <nav>
+<nav>
 
-        <div class="nav-container">
+    <div class="nav-container">
 
-            <div class="logo">
+        <a href="#home" class="logo">
 
-                <div class="logo-icon">
-                    XII
-                </div>
-
-                <span>
-                    RPL x TSM
-                </span>
-
+            <div class="logo-icon">
+                XII
             </div>
 
+            <span>
+                RPL x TSM
+            </span>
 
-            <ul class="nav-menu">
+        </a>
 
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
 
-                <li>
-                    <a href="#tentang">
-                        Tentang
-                    </a>
-                </li>
+        <div class="nav-links">
 
-                <li>
-                    <a href="#anggota">
-                        Anggota
-                    </a>
-                </li>
+            <a href="#home">
+                Home
+            </a>
 
-                <li>
-                    <a href="#kenangan">
-                        Kenangan
-                    </a>
-                </li>
+            <a href="#tentang">
+                Tentang
+            </a>
 
-            </ul>
+            <a href="#anggota">
+                Anggota
+            </a>
+
+            <a href="#kenangan">
+                Kenangan
+            </a>
 
         </div>
 
-    </nav>
+    </div>
+
+</nav>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
 
-    <section class="hero" id="home">
+<!-- =========================
+     HERO
+========================= -->
 
-        <div class="hero-container">
+<main id="home">
 
+    <div class="hero">
 
-            <div class="fade">
+        <div class="hero-content">
 
-                <div class="badge">
-                    ANGKATAN 2026
-                </div>
+            <div class="hero-badge">
 
+                <span></span>
 
-                <h1>
-
-                    XII RPL x TSM
-
-                    <br>
-
-                    <span class="gradient-text">
-                        One Class.
-                    </span>
-
-                    <br>
-
-                    One Story.
-
-                </h1>
-
-
-                <p>
-
-                    Satu kelas, banyak cerita.
-                    Bersama belajar, berkembang,
-                    berjuang, dan menciptakan
-                    kenangan yang akan selalu dikenang.
-
-                </p>
-
-
-                <div class="buttons">
-
-                    <a
-                        href="#anggota"
-                        class="btn btn-primary">
-
-                        Lihat Anggota →
-
-                    </a>
-
-
-                    <a
-                        href="#tentang"
-                        class="btn btn-secondary">
-
-                        Tentang Kami
-
-                    </a>
-
-                </div>
+                ANGKATAN 2026
 
             </div>
 
 
-            <!-- HERO CARD -->
+            <h1>
 
-            <div class="hero-card fade">
+                XII RPL
+                <span>x TSM</span>
 
-                <div class="circle"></div>
+                <span class="orange">
+                    One Story.
+                </span>
 
-                <div class="card-content">
+            </h1>
 
-                    <div>
 
-                        <div class="year">
-                            2026
+            <p class="hero-text">
+
+                Website resmi keluarga besar
+                XII RPL x TSM Angkatan 2026.
+                Satu kelas, banyak cerita,
+                dan kenangan yang akan selalu
+                menjadi bagian dari perjalanan kita.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#kenangan"
+                    class="btn btn-primary"
+                >
+                    Lihat Kenangan
+                </a>
+
+                <a
+                    href="#anggota"
+                    class="btn btn-secondary"
+                >
+                    Lihat Anggota
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-card">
+
+            <div class="hero-year">
+                2026
+            </div>
+
+
+            <div class="hero-card-content">
+
+                <div class="hero-card-label">
+                    OUR CLASS
+                </div>
+
+                <h2>
+                    XII RPL x TSM
+                </h2>
+
+                <p>
+                    Bukan hanya sekumpulan siswa,
+                    tetapi sebuah keluarga yang
+                    tumbuh bersama, belajar bersama,
+                    dan menciptakan cerita bersama.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         STATS
+    ========================= -->
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <div class="stat-number">
+                15+
+            </div>
+
+            <p>
+                Anggota Kelas
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-number">
+                2026
+            </div>
+
+            <p>
+                Angkatan
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-number">
+                XII
+            </div>
+
+            <p>
+                Tingkat Kelas
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TENTANG
+    ========================= -->
+
+    <section id="tentang">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                TENTANG KITA
+            </div>
+
+            <h2>
+                Satu kelas.
+                <br>
+                Banyak cerita.
+            </h2>
+
+            <p>
+                XII RPL x TSM adalah tempat
+                di mana berbagai karakter,
+                kemampuan, dan cerita bertemu
+                menjadi satu perjalanan.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Kebersamaan
+                </h3>
+
+                <p>
+                    Menjalani hari-hari sekolah
+                    bersama, saling membantu,
+                    dan menciptakan suasana kelas
+                    yang penuh cerita.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Perjalanan
+                </h3>
+
+                <p>
+                    Setiap tugas, kegiatan,
+                    candaan, dan tantangan
+                    menjadi bagian dari perjalanan
+                    menuju masa depan.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Semangat
+                </h3>
+
+                <p>
+                    Terus belajar, berkembang,
+                    dan berusaha menjadi versi
+                    terbaik dari diri sendiri.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    ∞
+                </div>
+
+                <h3>
+                    Kenangan
+                </h3>
+
+                <p>
+                    Masa sekolah mungkin akan
+                    berlalu, tetapi cerita dan
+                    kenangan yang dibuat bersama
+                    akan selalu menjadi bagian
+                    dari perjalanan kita.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ANGGOTA
+    ========================= -->
+
+    <section id="anggota">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                KELUARGA KELAS
+            </div>
+
+            <h2>
+                Anggota XII RPL x TSM
+            </h2>
+
+            <p>
+                Mereka yang membuat perjalanan
+                Angkatan 2026 menjadi lebih
+                berwarna.
+            </p>
+
+        </div>
+
+
+        <div class="members-grid">
+
+
+            <div class="member">
+                <div class="member-number">01</div>
+                <h3>Muhammad Yusuf Kurniawan</h3>
+                <p>Ketua Kelas</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">02</div>
+                <h3>Lutfiana Zakiyah</h3>
+                <p>Wakil Ketua</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">03</div>
+                <h3>Sarah Amelia</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">04</div>
+                <h3>Muhammad Romi Jatmiko</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">05</div>
+                <h3>Muhammad Khalid Asy-Sya'bani</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">06</div>
+                <h3>Muhammad Setya Dinan</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">07</div>
+                <h3>Adil Fatwa Al-Hadad</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">08</div>
+                <h3>Adzam Lukamnul Dzaki</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">09</div>
+                <h3>Septiana</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">10</div>
+                <h3>Maratun Nifiyah</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">11</div>
+                <h3>Afifah</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">12</div>
+                <h3>Lutviana Nur Aini</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">13</div>
+                <h3>Adzkia</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">14</div>
+                <h3>Karisma Adiesta</h3>
+                <p>Anggota</p>
+            </div>
+
+
+            <div class="member">
+                <div class="member-number">15</div>
+                <h3>Destamel Januari Nur Langit</h3>
+                <p>Anggota</p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         KENANGAN
+    ========================= -->
+
+    <section id="kenangan">
+
+        <div class="gallery-section-inner">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    MEMORY
+                </div>
+
+                <h2>
+                    Kenangan Kita
+                </h2>
+
+                <p>
+                    Kumpulan momen dan cerita
+                    XII RPL x TSM Angkatan 2026.
+                    Geser untuk melihat foto lainnya.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-wrapper">
+
+
+                <div class="gallery" id="gallery">
+
+
+                    <!-- FOTO 1 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto1.jpg"
+                            alt="Kenangan 1"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Kebersamaan
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM • 2026
+                            </p>
+
                         </div>
 
                     </div>
 
 
-                    <div class="hero-info">
 
-                        <h2>
-                            XII RPL x TSM
-                        </h2>
+                    <!-- FOTO 2 -->
 
-                        <p>
-                            Rekayasa Perangkat Lunak
-                            & Teknik Sepeda Motor
-                            • Satu kelas, satu keluarga.
-                        </p>
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto2.jpg"
+                            alt="Kenangan 2"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Satu Kelas
+                            </h3>
+
+                            <p>
+                                Angkatan 2026
+                            </p>
+
+                        </div>
 
                     </div>
 
+
+
+                    <!-- FOTO 3 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto3.jpg"
+                            alt="Kenangan 3"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Momen Bersama
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 4 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto4.jpg"
+                            alt="Kenangan 4"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Cerita Kita
+                            </h3>
+
+                            <p>
+                                Angkatan 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 5 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto5.jpg"
+                            alt="Kenangan 5"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Best Moment
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 6 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto6.jpg"
+                            alt="Kenangan 6"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                One Story
+                            </h3>
+
+                            <p>
+                                2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 7 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto7.jpg"
+                            alt="Kenangan 7"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Memories
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 8 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto8.jpg"
+                            alt="Kenangan 8"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Our Journey
+                            </h3>
+
+                            <p>
+                                Angkatan 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 9 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto9.jpg"
+                            alt="Kenangan 9"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Friendship
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 10 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto10.jpg"
+                            alt="Kenangan 10"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                School Story
+                            </h3>
+
+                            <p>
+                                Angkatan 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 11 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto11.jpg"
+                            alt="Kenangan 11"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <h3>
+                                Forever Memory
+                            </h3>
+
+                            <p>
+                                XII RPL x TSM • 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-            </div>
+
+                <!-- BUTTON -->
+
+                <div class="gallery-controls">
+
+                    <button
+                        class="gallery-btn"
+                        type="button"
+                        id="prevBtn"
+                        aria-label="Foto sebelumnya"
+                    >
+                        &#8592;
+                    </button>
 
 
-        </div>
+                    <button
+                        class="gallery-btn"
+                        type="button"
+                        id="nextBtn"
+                        aria-label="Foto berikutnya"
+                    >
+                        &#8594;
+                    </button>
 
-    </section>
-
-
-    <!-- =========================
-         STATISTIK
-    ========================== -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    OUR CLASS
                 </div>
 
-                <h2>
-                    Tentang Kelas
-                </h2>
 
-                <p>
-                    Sebuah perjalanan yang terdiri dari
-                    banyak cerita, tawa, perjuangan,
-                    dan kebersamaan.
-                </p>
-
-            </div>
-
-
-            <div class="stats">
-
-
-                <div class="stat">
-
-                    <strong>
-                        15+
-                    </strong>
+                <p class="gallery-hint">
 
                     <span>
-                        Anggota Kelas
+                        ← Geser →
                     </span>
 
-                </div>
+                    atau tekan tombol
+                    untuk melihat foto lainnya
 
-
-                <div class="stat">
-
-                    <strong>
-                        2026
-                    </strong>
-
-                    <span>
-                        Angkatan
-                    </span>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <strong>
-                        XII
-                    </strong>
-
-                    <span>
-                        Tingkat Kelas
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         TENTANG
-    ========================== -->
-
-    <section id="tentang">
-
-        <div class="container">
-
-            <div class="about-grid">
-
-
-                <div class="about-image">
-
-                    👨‍💻
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <div class="section-label">
-                        TENTANG KAMI
-                    </div>
-
-
-                    <h3>
-                        Bukan Sekadar Teman Sekelas
-                    </h3>
-
-
-                    <p>
-                        Kami adalah keluarga besar
-                        XII RPL x TSM. Bersama-sama
-                        belajar mengenai dunia teknologi,
-                        pemrograman, teknik, dan berbagai
-                        hal baru.
-                    </p>
-
-
-                    <p>
-                        Tidak semuanya selalu berjalan
-                        mudah. Ada tugas, ujian,
-                        deadline, kesalahan coding,
-                        praktik, dan berbagai tantangan.
-                    </p>
-
-
-                    <p>
-                        Namun justru dari semua itu
-                        tercipta cerita yang membuat
-                        perjalanan sekolah menjadi
-                        lebih berkesan.
-                    </p>
-
-
-                    <p>
-                        <b>Wali Kelas:</b>
-                        Bapak/Ibu Guru
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ANGGOTA
-    ========================== -->
-
-    <section id="anggota">
-
-        <div class="container">
-
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    OUR PEOPLE
-                </div>
-
-                <h2>
-                    Anggota Kelas
-                </h2>
-
-                <p>
-                    Kenalan dengan keluarga besar
-                    XII RPL x TSM.
                 </p>
 
-            </div>
-
-
-            <div class="anggota">
-
-
-                <!-- 1 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨‍💻
-                    </div>
-
-                    <h3>
-                        Muhammad Yusuf Kurniawan
-                    </h3>
-
-                    <p>
-                        Ketua Kelas
-                    </p>
-
-                </div>
-
-
-                <!-- 2 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩‍💻
-                    </div>
-
-                    <h3>
-                        Lutfiana Zakiyah
-                    </h3>
-
-                    <p>
-                        Wakil Ketua
-                    </p>
-
-                </div>
-
-
-                <!-- 3 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Sarah Amelia
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 4 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨
-                    </div>
-
-                    <h3>
-                        Muhammad Romi Jatmiko
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 5 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨‍💻
-                    </div>
-
-                    <h3>
-                        Muhammad Khalid Asy-Sya'bani
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 6 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨
-                    </div>
-
-                    <h3>
-                        Muhammad Setya Dinan
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 7 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨
-                    </div>
-
-                    <h3>
-                        Adil Fatwa Al-Hadad
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 8 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨
-                    </div>
-
-                    <h3>
-                        Adzam Lukamnul Dzaki
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 9 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Septiana
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 10 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Maratun Nifiyah
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 11 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Afifah
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 12 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Lutviana Nur Aini
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 13 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Adzkia
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 14 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👩
-                    </div>
-
-                    <h3>
-                        Karisma Adiesta
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
-
-                <!-- 15 -->
-
-                <div class="member">
-
-                    <div class="member-photo">
-                        👨
-                    </div>
-
-                    <h3>
-                        Destamel Januari Nur Langit
-                    </h3>
-
-                    <p>
-                        Anggota
-                    </p>
-
-                </div>
-
 
             </div>
 
@@ -1817,267 +1946,250 @@ content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
 
     </section>
 
-
-    <!-- =========================
-         FOTO KENANGAN
-    ========================== -->
-
-    <section id="kenangan">
-
-        <div class="container">
-
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    OUR MEMORIES
-                </div>
-
-                <h2>
-                    Foto Kenangan
-                </h2>
-
-                <p>
-                    Momen-momen sederhana yang menjadi
-                    bagian dari perjalanan XII RPL x TSM
-                    Angkatan 2026.
-                </p>
-
-            </div>
-
-
-            <div class="gallery">
-
-
-                <!-- FOTO 1 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto1.jpg"
-                        alt="Kenangan XII RPL x TSM">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            Kebersamaan
-                        </h3>
-
-                        <p>
-                            XII RPL x TSM • 2026
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOTO 2 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto2.jpg"
-                        alt="Kenangan kelas">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            Satu Kelas
-                        </h3>
-
-                        <p>
-                            Angkatan 2026
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOTO 3 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto3.jpg"
-                        alt="Kegiatan kelas">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            Momen Bersama
-                        </h3>
-
-                        <p>
-                            XII RPL x TSM
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOTO 4 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto4.jpg"
-                        alt="Kegiatan sekolah">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            Cerita Kita
-                        </h3>
-
-                        <p>
-                            Angkatan 2026
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOTO 5 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto5.jpg"
-                        alt="Kenangan sekolah">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            Best Moment
-                        </h3>
-
-                        <p>
-                            XII RPL x TSM
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOTO 6 -->
-
-                <div class="gallery-item">
-
-                    <img
-                        src="foto6.jpg"
-                        alt="Kenangan bersama">
-
-                    <div class="gallery-caption">
-
-                        <h3>
-                            One Story
-                        </h3>
-
-                        <p>
-                            2026
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
 
 
     <!-- =========================
          CTA
-    ========================== -->
+    ========================= -->
 
-    <section class="cta">
+    <div class="cta">
 
-        <div class="container">
+        <div class="cta-box">
 
             <h2>
-
-                Satu Kelas.
-
+                One Class.
                 <br>
-
-                Seribu Kenangan.
-
+                One Story.
             </h2>
 
-
             <p>
-
-                Setiap hari mungkin berlalu,
-                tapi cerita kita akan tetap menjadi
-                bagian dari perjalanan ini.
-
+                Tahun boleh berganti,
+                sekolah boleh selesai,
+                tetapi cerita XII RPL x TSM
+                Angkatan 2026 akan selalu
+                menjadi bagian dari perjalanan kita.
             </p>
 
-
-            <a
-                href="#home"
-                class="btn btn-primary">
-
-                Kembali ke Atas ↑
-
-            </a>
+            <button
+                class="btn btn-primary"
+                onclick="sapa()"
+            >
+                Salam Keluarga Kelas
+            </button>
 
         </div>
 
-    </section>
+    </div>
+
+</main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
 
-    <footer>
+<!-- =========================
+     FOOTER
+========================= -->
 
-        <h3>
-            XII RPL x TSM
-        </h3>
+<footer>
 
-        <p>
-            Angkatan 2026 • Rekayasa Perangkat Lunak
-            & Teknik Sepeda Motor
-        </p>
+    © 2026
+    <strong>
+        XII RPL x TSM
+    </strong>
 
-        <br>
+    • Angkatan 2026
 
-        <p>
-            © 2026 XII RPL x TSM.
-            Made with ❤️ by our class.
-        </p>
-
-    </footer>
+</footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
 
-    <script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-        function sapa() {
+<script>
 
-            alert(
-                "Salam dari keluarga XII RPL x TSM! 🎉"
-            );
+    const gallery =
+        document.getElementById("gallery");
+
+    const prevBtn =
+        document.getElementById("prevBtn");
+
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+
+    function geserFoto(arah) {
+
+        const foto =
+            gallery.querySelector(".gallery-item");
+
+        if (!foto) return;
+
+
+        const gap = 18;
+
+        const jarak =
+            foto.getBoundingClientRect().width
+            + gap;
+
+
+        gallery.scrollBy({
+
+            left: arah * jarak,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+
+    prevBtn.addEventListener(
+        "click",
+        function () {
+
+            geserFoto(-1);
 
         }
+    );
 
-    </script>
+
+    nextBtn.addEventListener(
+        "click",
+        function () {
+
+            geserFoto(1);
+
+        }
+    );
+
+
+    function sapa() {
+
+        alert(
+            "Salam dari keluarga XII RPL x TSM! 🎉"
+        );
+
+    }
+
+
+    /* =========================
+       DRAG MOUSE
+    ========================= */
+
+    let sedangDrag = false;
+
+    let posisiAwal;
+
+    let scrollAwal;
+
+
+    gallery.addEventListener(
+        "mousedown",
+        function (e) {
+
+            sedangDrag = true;
+
+            gallery.style.scrollBehavior = "auto";
+
+            posisiAwal = e.pageX;
+
+            scrollAwal = gallery.scrollLeft;
+
+        }
+    );
+
+
+    gallery.addEventListener(
+        "mouseleave",
+        function () {
+
+            sedangDrag = false;
+
+        }
+    );
+
+
+    gallery.addEventListener(
+        "mouseup",
+        function () {
+
+            sedangDrag = false;
+
+            gallery.style.scrollBehavior = "smooth";
+
+        }
+    );
+
+
+    gallery.addEventListener(
+        "mousemove",
+        function (e) {
+
+            if (!sedangDrag) return;
+
+            e.preventDefault();
+
+            const jarak =
+                e.pageX - posisiAwal;
+
+            gallery.scrollLeft =
+                scrollAwal - jarak;
+
+        }
+    );
+
+
+    /* =========================
+       TOUCH SUPPORT
+    ========================= */
+
+    let touchStart = 0;
+
+
+    gallery.addEventListener(
+        "touchstart",
+        function (e) {
+
+            touchStart =
+                e.touches[0].clientX;
+
+        },
+        { passive: true }
+    );
+
+
+    gallery.addEventListener(
+        "touchend",
+        function (e) {
+
+            const touchEnd =
+                e.changedTouches[0].clientX;
+
+            const jarak =
+                touchStart - touchEnd;
+
+
+            if (Math.abs(jarak) > 50) {
+
+                if (jarak > 0) {
+
+                    geserFoto(1);
+
+                } else {
+
+                    geserFoto(-1);
+
+                }
+
+            }
+
+        },
+        { passive: true }
+    );
+
+</script>
 
 
 </body>
-
 </html>
-
