@@ -1139,11 +1139,317 @@
             }
         }
 
-    </style>
+    
+
+        /* =========================
+           WELCOME INTRO SCREEN
+           Tambahan baru - fitur website lama tetap dipertahankan
+        ========================= */
+        body.intro-active {
+            overflow: hidden;
+        }
+
+        #welcome-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            overflow: hidden;
+            isolation: isolate;
+            background:
+                radial-gradient(ellipse at 20% 25%, rgba(0,229,255,.17), transparent 38%),
+                radial-gradient(ellipse at 80% 75%, rgba(255,122,0,.16), transparent 38%),
+                linear-gradient(135deg, #05080e 0%, #09111c 52%, #08090e 100%);
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .9s ease, visibility .9s ease;
+        }
+
+        #welcome-screen::before,
+        #welcome-screen::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: min(65vw, 620px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .22;
+            pointer-events: none;
+            animation: welcomeOrb 7s ease-in-out infinite alternate;
+        }
+
+        #welcome-screen::before {
+            background: #00e5ff;
+            top: -30%;
+            left: -18%;
+        }
+
+        #welcome-screen::after {
+            background: #ff7a00;
+            right: -20%;
+            bottom: -35%;
+            animation-delay: -3s;
+        }
+
+        #welcome-screen.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .welcome-grid {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(ellipse at center, black 15%, transparent 78%);
+        }
+
+        .welcome-content {
+            width: min(100%, 1100px);
+            text-align: center;
+            animation: welcomeContentIn 1.1s cubic-bezier(.2,.8,.2,1) both;
+        }
+
+        .welcome-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: clamp(24px, 5vh, 44px);
+            padding: 10px 16px;
+            border: 1px solid rgba(0,229,255,.24);
+            border-radius: 100px;
+            background: rgba(0,229,255,.055);
+            color: #b8f7ff;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            box-shadow: 0 0 28px rgba(0,229,255,.07), inset 0 0 18px rgba(0,229,255,.035);
+        }
+
+        .welcome-kicker::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            flex: 0 0 7px;
+            border-radius: 50%;
+            background: #00e5ff;
+            box-shadow: 0 0 13px #00e5ff;
+            animation: welcomeBlink 1.5s ease-in-out infinite;
+        }
+
+        .welcome-title {
+            margin: 0 auto;
+            color: #f7fcff;
+            font-size: clamp(34px, 8.2vw, 108px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: clamp(-5px, -.45vw, -1px);
+            text-wrap: balance;
+            text-shadow:
+                0 1px 0 rgba(255,255,255,.8),
+                0 3px 0 rgba(104,170,190,.55),
+                0 6px 0 rgba(24,70,91,.7),
+                0 12px 28px rgba(0,0,0,.75),
+                0 0 18px rgba(0,229,255,.55),
+                0 0 48px rgba(0,229,255,.28),
+                0 0 75px rgba(255,122,0,.16);
+            animation: welcomeTitleGlow 4s ease-in-out infinite alternate;
+        }
+
+        .welcome-title span {
+            display: block;
+            background: linear-gradient(100deg, #eafcff 5%, #70f1ff 38%, #ffffff 54%, #ffbd7a 78%, #ff7a00 100%);
+            background-size: 220% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(0,229,255,.23));
+            animation: welcomeGradient 6s linear infinite;
+        }
+
+        .welcome-line {
+            width: min(360px, 65%);
+            height: 2px;
+            margin: clamp(24px, 5vh, 42px) auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, transparent, #00e5ff 28%, #fff 50%, #ff7a00 72%, transparent);
+            box-shadow: 0 0 16px rgba(0,229,255,.65), 0 0 30px rgba(255,122,0,.2);
+            animation: welcomeLineIn 1.2s ease .35s both;
+        }
+
+        .welcome-description {
+            color: #a6b2c1;
+            font-size: clamp(10px, 1.5vw, 13px);
+            font-weight: 600;
+            letter-spacing: clamp(2px, .6vw, 5px);
+            line-height: 1.8;
+            margin-bottom: 34px;
+        }
+
+        .welcome-enter {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            min-height: 52px;
+            padding: 0 26px;
+            overflow: hidden;
+            border: 1px solid rgba(0,229,255,.65);
+            border-radius: 12px;
+            color: #eaffff;
+            background: linear-gradient(110deg, rgba(0,229,255,.15), rgba(255,122,0,.12));
+            box-shadow: 0 0 25px rgba(0,229,255,.12), inset 0 0 20px rgba(0,229,255,.045);
+            font: inherit;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+        }
+
+        .welcome-enter::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: translateX(-120%);
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.2), transparent);
+            transition: transform .65s ease;
+        }
+
+        .welcome-enter:hover {
+            transform: translateY(-3px);
+            border-color: #ffad68;
+            box-shadow: 0 0 30px rgba(0,229,255,.2), 0 0 30px rgba(255,122,0,.13);
+        }
+
+        .welcome-enter:hover::before {
+            transform: translateX(120%);
+        }
+
+        .welcome-enter span,
+        .welcome-enter .welcome-arrow {
+            position: relative;
+            z-index: 1;
+        }
+
+        .welcome-arrow {
+            color: #ffad68;
+            font-size: 18px;
+            transition: transform .3s ease;
+        }
+
+        .welcome-enter:hover .welcome-arrow {
+            transform: translateX(4px);
+        }
+
+        .welcome-footnote {
+            margin-top: 24px;
+            color: rgba(177,190,207,.52);
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        .welcome-star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #c8faff;
+            box-shadow: 0 0 12px #00e5ff;
+            opacity: .2;
+            pointer-events: none;
+            animation: welcomeStar 3.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes welcomeContentIn {
+            from { opacity: 0; transform: translateY(24px) scale(.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes welcomeTitleGlow {
+            from { filter: brightness(.92); }
+            to { filter: brightness(1.12); }
+        }
+
+        @keyframes welcomeGradient {
+            from { background-position: 0% center; }
+            to { background-position: 220% center; }
+        }
+
+        @keyframes welcomeLineIn {
+            from { opacity: 0; transform: scaleX(.15); }
+            to { opacity: 1; transform: scaleX(1); }
+        }
+
+        @keyframes welcomeOrb {
+            from { transform: translate3d(0,0,0) scale(.9); }
+            to { transform: translate3d(35px,-20px,0) scale(1.08); }
+        }
+
+        @keyframes welcomeBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .35; }
+        }
+
+        @keyframes welcomeStar {
+            from { opacity: .12; transform: scale(.7); }
+            to { opacity: .9; transform: scale(1.4); }
+        }
+
+        @media (max-width: 600px) {
+            .welcome-kicker { font-size: 8px; letter-spacing: 2.5px; padding: 9px 12px; }
+            .welcome-title { letter-spacing: -1.8px; }
+            .welcome-description { max-width: 300px; margin-left: auto; margin-right: auto; }
+            .welcome-enter { min-height: 48px; padding: 0 20px; font-size: 10px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #welcome-screen *, #welcome-screen::before, #welcome-screen::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+</style>
 </head>
 
 
 <body>
+
+<!-- =========================
+     WELCOME INTRO SCREEN (BARU)
+     Klik MASUK WEBSITE untuk membuka website utama
+========================= -->
+<div id="welcome-screen" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-grid" aria-hidden="true"></div>
+    <div id="welcome-stars" aria-hidden="true"></div>
+    <div class="welcome-content">
+        <div class="welcome-kicker">XII RPL x TSM <span style="color:#ffad68">•</span> ANGKATAN 2026</div>
+        <h1 class="welcome-title" id="welcome-title">
+            WELCOME TO
+            <span>OUR WEBSITE</span>
+        </h1>
+        <div class="welcome-line" aria-hidden="true"></div>
+        <p class="welcome-description">ONE CLASS. ONE STORY. COUNTLESS MEMORIES.</p>
+        <button class="welcome-enter" id="welcome-enter" type="button">
+            <span>MASUK WEBSITE</span>
+            <span class="welcome-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="welcome-footnote">MADE WITH PRIDE · CLASS OF 2026</p>
+    </div>
+</div>
+
 
 
 <!-- =========================
@@ -2190,6 +2496,55 @@
 
 </script>
 
+
+
+
+<!-- WELCOME INTRO SCRIPT (BARU; JAVASCRIPT WEBSITE ASLI TETAP ADA) -->
+<script>
+(function () {
+    const screen = document.getElementById('welcome-screen');
+    const enterButton = document.getElementById('welcome-enter');
+    const stars = document.getElementById('welcome-stars');
+
+    if (!screen || !enterButton) return;
+    document.body.classList.add('intro-active');
+
+    // Bintang dekoratif pada layar pembuka.
+    if (stars) {
+        for (let i = 0; i < 48; i++) {
+            const star = document.createElement('span');
+            star.className = 'welcome-star';
+            star.style.left = (Math.random() * 100) + '%';
+            star.style.top = (Math.random() * 100) + '%';
+            star.style.animationDelay = (Math.random() * 3.5) + 's';
+            star.style.animationDuration = (2 + Math.random() * 3) + 's';
+            const size = 1 + Math.random() * 2;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            stars.appendChild(star);
+        }
+    }
+
+    let introClosed = false;
+    function masukWebsite() {
+        if (introClosed) return;
+        introClosed = true;
+        screen.classList.add('is-hidden');
+        document.body.classList.remove('intro-active');
+        // Keluarkan layar pembuka dari akses keyboard setelah transisi selesai.
+        window.setTimeout(function () {
+            screen.style.display = 'none';
+        }, 950);
+    }
+
+    enterButton.addEventListener('click', masukWebsite);
+    document.addEventListener('keydown', function (event) {
+        if (!introClosed && (event.key === 'Enter' || event.key === 'Escape')) {
+            masukWebsite();
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
