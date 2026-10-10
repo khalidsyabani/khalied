@@ -6,14 +6,14 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>XII RPL x TSM | Angkatan 2026</title>
+    <title>XII RPL x TSM | Angkatan 2026/2027</title>
 
     <!-- FAVICON: logo kelas pada tab browser -->
     <link rel="icon" type="image/png" href="favicon-xii.png">
     <link rel="apple-touch-icon" href="favicon-xii.png">
 
     <meta name="description"
-          content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026">
+          content="Website resmi keluarga besar XII RPL x TSM Angkatan 2026/2027">
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- FAVICON XII -->
-   <!-- FAVICON: logo kelas pada tab browser -->
+    <!-- FAVICON: logo kelas pada tab browser -->
 <link rel="icon" type="image/png" href="favicon-xii.png">
 <link rel="apple-touch-icon" href="favicon-xii.png">
+
     <style>
 
         /* =========================
@@ -617,79 +618,89 @@
 
         .members-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 15px;
         }
 
         .member {
             position: relative;
-
-            padding: 24px;
-
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 0;
+            padding: 18px;
             border-radius: 18px;
-
-            background:
-                rgba(255,255,255,.025);
-
-            border: 1px solid rgba(255,255,255,.06);
-
+            background: rgba(255,255,255,.025);
+            border: 1px solid rgba(255,255,255,.08);
             transition: .3s;
-
             overflow: hidden;
         }
 
         .member::before {
             content: "";
-
             position: absolute;
-
             width: 80px;
             height: 80px;
-
             right: -35px;
             top: -35px;
-
             border-radius: 50%;
-
             background: rgba(0,229,255,.05);
+            pointer-events: none;
         }
 
         .member:hover {
             transform: translateY(-5px);
+            border-color: rgba(0,229,255,.3);
+            background: rgba(0,229,255,.035);
+        }
 
-            border-color:
-                rgba(0,229,255,.25);
+        .member-photo {
+            width: 68px;
+            height: 68px;
+            flex: 0 0 68px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: 2px solid rgba(0,229,255,.45);
+            background: #101923;
+            box-shadow: 0 0 18px rgba(0,229,255,.10);
+        }
+
+        .member-info {
+            position: relative;
+            z-index: 1;
+            min-width: 0;
         }
 
         .member-number {
             color: #00e5ff;
-
             font-size: 10px;
-
             font-weight: 900;
-
             letter-spacing: 1px;
-
-            margin-bottom: 13px;
+            margin-bottom: 8px;
         }
 
         .member h3 {
             font-size: 14px;
-
             line-height: 1.5;
-
             margin-bottom: 6px;
+            overflow-wrap: anywhere;
         }
 
         .member p {
             color: #777f8c;
-
             font-size: 11px;
         }
 
+        @media (max-width: 850px) {
+            .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 560px) {
+            .members-grid { grid-template-columns: 1fr; }
+            .member { padding: 16px; gap: 14px; }
+            .member-photo { width: 60px; height: 60px; flex-basis: 60px; }
+        }
 
         /* =========================
            GALLERY
@@ -1867,107 +1878,152 @@
 
 
             <div class="member">
-                <div class="member-number">01</div>
-                <h3>Muhammad Yusuf Kurniawan</h3>
-                <p>Ketua Kelas</p>
+                <img class="member-photo" src="Muhammad Yusuf Kurniawan.jpg" alt="Foto Muhammad Yusuf Kurniawan" loading="lazy" onerror="this.onerror=null;this.src='Muhammad Yusuf Kurniawan.png';">
+                <div class="member-info">
+                    <div class="member-number">01</div>
+                    <h3>Muhammad Yusuf Kurniawan</h3>
+                    <p>Ketua Kelas</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">02</div>
-                <h3>Lutfiana Zakiyah</h3>
-                <p>Wakil Ketua</p>
+                <img class="member-photo" src="Lutfiana Zakiyah.jpg" alt="Foto Lutfiana Zakiyah" loading="lazy" onerror="this.onerror=null;this.src='Lutfiana Zakiyah.png';">
+                <div class="member-info">
+                    <div class="member-number">02</div>
+                    <h3>Lutfiana Zakiyah</h3>
+                    <p>Wakil Ketua</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">03</div>
-                <h3>Sarah Amelia</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Sarah Amelia.jpg" alt="Foto Sarah Amelia" loading="lazy" onerror="this.onerror=null;this.src='Sarah Amelia.png';">
+                <div class="member-info">
+                    <div class="member-number">03</div>
+                    <h3>Sarah Amelia</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">04</div>
-                <h3>Muhammad Romi Jatmiko</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Muhammad Romi Jatmiko.jpg" alt="Foto Muhammad Romi Jatmiko" loading="lazy" onerror="this.onerror=null;this.src='Muhammad Romi Jatmiko.png';">
+                <div class="member-info">
+                    <div class="member-number">04</div>
+                    <h3>Muhammad Romi Jatmiko</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">05</div>
-                <h3>Muhammad Khalid Asy-Sya'bani</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Muhammad Khalid Asy-Sya'bani.jpg" alt="Foto Muhammad Khalid Asy-Sya'bani" loading="lazy" onerror="this.onerror=null;this.src='Muhammad Khalid Asy-Sya'bani.png';">
+                <div class="member-info">
+                    <div class="member-number">05</div>
+                    <h3>Muhammad Khalid Asy-Sya'bani</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">06</div>
-                <h3>Muhammad Setya Dinan</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Muhammad Setya Dinan.jpg" alt="Foto Muhammad Setya Dinan" loading="lazy" onerror="this.onerror=null;this.src='Muhammad Setya Dinan.png';">
+                <div class="member-info">
+                    <div class="member-number">06</div>
+                    <h3>Muhammad Setya Dinan</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">07</div>
-                <h3>Adil Fatwa Al-Hadad</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Adil Fatwa Al-Hadad.jpg" alt="Foto Adil Fatwa Al-Hadad" loading="lazy" onerror="this.onerror=null;this.src='Adil Fatwa Al-Hadad.png';">
+                <div class="member-info">
+                    <div class="member-number">07</div>
+                    <h3>Adil Fatwa Al-Hadad</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">08</div>
-                <h3>Adzam Lukamnul Dzaki</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Adzam Lukamnul Dzaki.jpg" alt="Foto Adzam Lukamnul Dzaki" loading="lazy" onerror="this.onerror=null;this.src='Adzam Lukamnul Dzaki.png';">
+                <div class="member-info">
+                    <div class="member-number">08</div>
+                    <h3>Adzam Lukamnul Dzaki</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">09</div>
-                <h3>Septiana</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Septiana.jpg" alt="Foto Septiana" loading="lazy" onerror="this.onerror=null;this.src='Septiana.png';">
+                <div class="member-info">
+                    <div class="member-number">09</div>
+                    <h3>Septiana</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">10</div>
-                <h3>Maratun Nifiyah</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Maratun Nifiyah.jpg" alt="Foto Maratun Nifiyah" loading="lazy" onerror="this.onerror=null;this.src='Maratun Nifiyah.png';">
+                <div class="member-info">
+                    <div class="member-number">10</div>
+                    <h3>Maratun Nifiyah</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">11</div>
-                <h3>Afifah</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Afifah.jpg" alt="Foto Afifah" loading="lazy" onerror="this.onerror=null;this.src='Afifah.png';">
+                <div class="member-info">
+                    <div class="member-number">11</div>
+                    <h3>Afifah</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">12</div>
-                <h3>Lutviana Nur Aini</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Lutviana Nur Aini.jpg" alt="Foto Lutviana Nur Aini" loading="lazy" onerror="this.onerror=null;this.src='Lutviana Nur Aini.png';">
+                <div class="member-info">
+                    <div class="member-number">12</div>
+                    <h3>Lutviana Nur Aini</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">13</div>
-                <h3>Adzkia</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Adzkia.jpg" alt="Foto Adzkia" loading="lazy" onerror="this.onerror=null;this.src='Adzkia.png';">
+                <div class="member-info">
+                    <div class="member-number">13</div>
+                    <h3>Adzkia</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">14</div>
-                <h3>Karisma Adiesta</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Karisma Adiesta.jpg" alt="Foto Karisma Adiesta" loading="lazy" onerror="this.onerror=null;this.src='Karisma Adiesta.png';">
+                <div class="member-info">
+                    <div class="member-number">14</div>
+                    <h3>Karisma Adiesta</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
             <div class="member">
-                <div class="member-number">15</div>
-                <h3>Destamel Januari Nur Langit</h3>
-                <p>Anggota</p>
+                <img class="member-photo" src="Destamel Januari Nur Langit.jpg" alt="Foto Destamel Januari Nur Langit" loading="lazy" onerror="this.onerror=null;this.src='Destamel Januari Nur Langit.png';">
+                <div class="member-info">
+                    <div class="member-number">15</div>
+                    <h3>Destamel Januari Nur Langit</h3>
+                    <p>Anggota</p>
+                </div>
             </div>
 
 
